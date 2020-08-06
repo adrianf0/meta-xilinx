@@ -19,7 +19,7 @@ LIBC_DEPENDENCIES_append = " newlib-staticdev libgloss-staticdev"
 
 ESW_CFLAGS ?= ""
 
-INHERIT += "buildhistory"
+#INHERIT += "buildhistory"
 
 # Cortex R5 requires an additional cflag to be passed for compatibility with the embeddedsw
 TUNE_CCARGS .= "${@bb.utils.contains('TUNE_FEATURES', 'cortexr5', ' -DARMR5', '', d)}"
